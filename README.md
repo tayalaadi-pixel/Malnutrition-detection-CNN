@@ -8,7 +8,7 @@ Faculty-supervised project under Prof. Rajya Lakshmi, BITS Pilani.
 
 Traditional malnutrition screening relies on anthropometric measurements (height, weight, BMI) and clinical evaluation, which can be slow and resource-intensive in low-resource settings. This project explores whether facial images alone can serve as a non-invasive, scalable signal for malnutrition detection.
 
-**Full write-up:** see [`report/project_report.pdf`](report/project_report.pdf) for the complete methodology, results, and analysis.
+**Full write-up:** see [`project_report/project_report.pdf`](project_report/project_report.pdf) for the complete methodology, results, and analysis.
 
 ## Dataset
 
@@ -31,8 +31,8 @@ DenseNet121 and the hybrid model were built as comparison points to confirm the 
 | Model | Accuracy | AUC |
 |---|---|---|
 | ResNet-50 (final) | **83%** | **0.80** |
-| DenseNet121 | 76–77% | 0.76–0.77 |
-| Hybrid (CNN features + classifier) | 82.2% | 0.75–0.76 |
+| DenseNet121 | 76.5% | 0.77 |
+| Hybrid (CNN features + classifier) | 82.2% | 0.76 |
 
 Accuracy alone is misleading on an imbalanced dataset, so AUC and confusion matrices were used throughout to evaluate class-level performance rather than overall accuracy.
 
@@ -41,7 +41,7 @@ Accuracy alone is misleading on an imbalanced dataset, so AUC and confusion matr
 
 The chart below combines both metrics across all 9 model iterations, showing the same trend in one view — the sharp jump at the ResNet-50 preprocessing fix, followed by comparable performance from DenseNet121 and the hybrid model.
 
-![Accuracy and AUC progression over all model iterations](figures/combined_progression.png)
+![Combined accuracy and AUC progression over all model iterations](figures/combined_progression.png)
 
 ### Key finding
 
