@@ -12,7 +12,7 @@ Traditional malnutrition screening relies on anthropometric measurements (height
 
 ## Dataset
 
-446 facial images across two classes (Normal / Abnormal), with class imbalance. Given the small dataset size, models used transfer learning rather than training from scratch, with an auxiliary facial-aging dataset (FG-NET) used to pretrain some models before fine-tuning on the malnutrition task. **The dataset itself is not included in this repository**, since it contains real children's facial images.
+~446 facial images across two classes (Normal / Abnormal), with class imbalance. Given the small dataset size, models used transfer learning rather than training from scratch, with an auxiliary facial-aging dataset (FG-NET) used to pretrain some models before fine-tuning on the malnutrition task. **The dataset itself is not included in this repository**, since it contains real children's facial images.
 
 ## Approach
 
@@ -38,6 +38,10 @@ Accuracy alone is misleading on an imbalanced dataset, so AUC and confusion matr
 
 ![Accuracy progression across model iterations](figures/accuracy_progression.png)
 ![AUC progression across model iterations](figures/auc_progression.png)
+
+The chart below combines both metrics across all 9 model iterations, showing the same trend in one view — the sharp jump at the ResNet-50 preprocessing fix, followed by comparable performance from DenseNet121 and the hybrid model.
+
+![Accuracy and AUC progression over all model iterations](figures/combined_progression.png)
 
 ### Key finding
 
